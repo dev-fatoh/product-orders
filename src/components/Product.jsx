@@ -11,7 +11,7 @@ export default function Product({ product, addToCart }) {
   }
 
   return (
-    <div className="col-span-1 p-6 cursor-pointer">
+    <div className="col-span-1 p-6 cursor-pointer mx-auto">
       <div className="relative mb-10" onClick={() => setAdd(!add)}>
         <img
           className="rounded-2xl hover:border-1 hover:boreder-red-900"
