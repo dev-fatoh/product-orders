@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Product({ product, addToCart }) {
   const [add, setAdd] = useState(false);
@@ -14,10 +14,22 @@ export default function Product({ product, addToCart }) {
     <div className="col-span-1 p-6 cursor-pointer mx-auto">
       <div className="relative mb-10" onClick={() => setAdd(!add)}>
         <img
-          className="rounded-2xl hover:border-1 hover:boreder-red-900"
+          className="md:hidden lg:hidden rounded-2xl hover:border-1 hover:boreder-red-900"
+          src={product.image.mobile}
+          alt="product image"
+        />
+        <img
+          className="hidden md:inline lg:hidden rounded-2xl hover:border-1 hover:boreder-red-900"
+          src={product.image.tablet}
+          alt="product image"
+        />
+
+        <img
+          className="hidden lg:inline rounded-2xl hover:border-1 hover:boreder-red-900"
           src={product.image.desktop}
           alt="product image"
         />
+
         {add ? (
           <button
             className="absolute bottom-0 left-1/2 w-1/2 rounded-3xl p-2 -translate-x-1/2 border-1 border-red-900 translate-y-1/2 bg-red-900 text-black text-[1.3rem] flex justify-around items-center"
