@@ -69,10 +69,10 @@ export default function App() {
                   key={item.id}
                   className="flex items-center justify-between border-b-2 border-b-gray-300 p-1 md:p-3"
                 >
-                  <div className="left flex gap-2 items-center">
+                  <div className="left flex flex-col md:flex-row gap-2 items-start md:items-start">
                     <img src={item.image.thumbnail} alt={item.name} />
                     <div>
-                      <h3 className="font-bold mb-4">{item.name}</h3>
+                      <h3 className="font-bold text-base mb-4">{item.name}</h3>
                       <span className="text-red-900 font-bold text-[1.3rem] mr-2">
                         {item.quantity}X
                       </span>
@@ -99,7 +99,7 @@ export default function App() {
             </div>
             {/* Button to start new order */}
             <button
-              className="block w-full p-3 bg-red-700 text-white rounded-3xl text-[1.2rem] font-bold cursor-pointer"
+              className="block w-full p-3 bg-red-700 text-white rounded-3xl text-base font-bold cursor-pointer"
               onClick={() => {
                 setCart([]);
                 setModel(false);

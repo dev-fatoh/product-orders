@@ -70,7 +70,7 @@ export default function Product({ product, addToCart }) {
         ) : (
           // Add to cart button
           <button
-            className="absolute bottom-0 left-1/2 w-1/2 rounded-3xl p-2 -translate-x-1/2 border-1 border-red-900 translate-y-1/2 bg-white text-black text-[1.3rem] flex items-center justify-center gap-2"
+            className="absolute bottom-0 left-1/2 w-1/2 rounded-3xl p-2 -translate-x-1/2 border-1 border-red-900 translate-y-1/2 bg-white text-black flex items-center justify-center gap-2 cursor-pointer"
             onClick={() => {
               addToCart(product, quantity); // Call addToCart with product and quantity
             }}
