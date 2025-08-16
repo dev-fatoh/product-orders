@@ -58,7 +58,7 @@ export default function App() {
       {/* Confirmation modal */}
       {model && (
         <div className="absolute inset-0 z-10 bg-black/50 h-screen w-full flex items-center justify-center">
-          <div className="p-8 w-1/2 bg-white rounded-2xl">
+          <div className="p-8 w-full md:max-w-1/2 bg-white rounded-2xl">
             <img src={confirmIcon} alt="confirm icon" />
             <h2 className="my-2 text-3xl font-bold">Order confirmed</h2>
             <p className="text-gray-600">we hope you enjoy your food!</p>
@@ -67,12 +67,12 @@ export default function App() {
               {cart.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center justify-between border-b-2 border-b-gray-300 p-3"
+                  className="flex items-center justify-between border-b-2 border-b-gray-300 p-1 md:p-3"
                 >
-                  <div className="left flex gap-2">
+                  <div className="left flex gap-2 items-center">
                     <img src={item.image.thumbnail} alt={item.name} />
                     <div>
-                      <h3 className="font-bold">{item.name}</h3>
+                      <h3 className="font-bold mb-4">{item.name}</h3>
                       <span className="text-red-900 font-bold text-[1.3rem] mr-2">
                         {item.quantity}X
                       </span>
