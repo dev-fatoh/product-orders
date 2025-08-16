@@ -30,7 +30,7 @@ export default function Cart({ products, handleModel }) {
                   <h3 className="text-xl">{product.name}</h3>
                   <p className="text-gray-600">Quantity: {product.quantity}</p>
                 </div>
-                <p className="text-orange-800 font-bold text-xl">
+                <p className="text-orange-800 font-bold text-base">
                   $ {(product.price * product.quantity).toFixed(2)}
                 </p>
               </div>
@@ -38,14 +38,14 @@ export default function Cart({ products, handleModel }) {
           ))}
           {/* Display the total price */}
           <div className="flex items-center justify-between mt-4">
-            <h3 className="text-2xl font-bold">Order Total:</h3>
-            <p className="text-orange-800 font-bold text-2xl">
+            <h3 className="font-bold">Order Total:</h3>
+            <p className="text-orange-800 font-bold">
               $ {totalPrice.toFixed(2)}
             </p>
           </div>
           {/* Confirm order button */}
           <button
-            className="bg-amber-950 text-white w-3/4 mx-auto block text-[1.3rem] rounded-4xl py-3 mt-6 cursor-pointer"
+            className="bg-amber-950 text-white w-3/4 mx-auto block rounded-4xl py-3 mt-6 cursor-pointer"
             onClick={handleModel}
           >
             Confirm Order
