@@ -22,7 +22,7 @@ export default function App() {
       if (existingProduct) {
         // Update quantity if product already in cart
         return prev.map((item) =>
-          item.id === product.id ? { ...item, quantity: quantity } : item
+          item.id === product.id ? { ...item, quantity: quantity } : item,
         );
       }
       // Add new product to cart
