@@ -44,7 +44,7 @@ export default function Product({ product, addToCart }) {
         {/* Conditional rendering: show quantity selector or add to cart button */}
         {add ? (
           // Quantity selector
-          <button
+          <div
             className="absolute bottom-0 left-1/2 w-1/2 rounded-4xl p-2 -translate-x-1/2 border-1 border-red-900 translate-y-1/2 bg-red-900 text-black text-[1.3rem] flex justify-around items-center"
             onClick={(e) => {
               e.stopPropagation(); // Prevent parent click event
@@ -66,7 +66,7 @@ export default function Product({ product, addToCart }) {
             >
               <img src={incrementQ} alt=" increment icon" />
             </button>
-          </button>
+          </div>
         ) : (
           // Add to cart button
           <button

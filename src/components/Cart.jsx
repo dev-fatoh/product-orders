@@ -3,7 +3,7 @@ import empty from "../assets/illustration-empty-cart.svg";
 export default function Cart({ products, handleModel }) {
   const totalPrice = products.reduce(
     (sum, item) => sum + item.price * item.quantity,
-    0
+    0,
   );
   // Render the cart UI
   return (
