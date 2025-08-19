@@ -43,7 +43,7 @@ export default function App() {
   return (
     <div
       className={`h-screen grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 relative ${
-        model && cart.length < 5 && "overflow-hidden"
+        model && cart.length < 5 && "md:overflow-hidden"
       } `}
     >
       {/* Products section */}
